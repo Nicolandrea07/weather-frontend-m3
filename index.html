@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clima Villarrica</title>
+<link href="" rel="stylesheet">
+</head>
+<body class="bg-light">
+<header>
+<nav class="navbar navbar-dark bg-dark mb-4">
+<div class="container">
+<span class="navbar-brand">Clima Villarrica</span>
+<button class="btn btn-outline-light btn-sm" onclick="mostrarHome()">Inicio</button>
+</div>
+</nav>
+</header>
+<main class="container">
+<div id="home-section">
+<h1 class="text-center mb-4">Localidades Araucanía</h1>
+<div id="contenedor-cards" class="row g-3">
+</div>
+</div>
+<div id="detalle-section" style="display: none;">
+<button class="btn btn-secondary mb-3" onclick="mostrarHome()">Volver</button>
+<div id="contenido-detalle"></div>
+</div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
