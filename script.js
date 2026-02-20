@@ -52,4 +52,5 @@ function mostrarHome() {
     document.getElementById('detalle-section').style.display = 'none';
 }
 
+
 window.onload = cargarHome;
