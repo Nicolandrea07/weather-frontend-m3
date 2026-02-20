@@ -85,3 +85,4 @@ function verDetalle(id) {
 
 // Inicializar la carga de tarjetas
 document.addEventListener("DOMContentLoaded", mostrarTarjetas);
+// Versión final módulo 3
