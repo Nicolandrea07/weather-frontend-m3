@@ -1,0 +1,46 @@
+// MIXIN: El "molde" para el efecto hover (Requisito Módulo 3)
+@mixin hover-elevation {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// BEM: Bloque principal .place-card
+.place-card {
+    background-color: $white;
+    border-radius: $card-radius;
+    padding: $card-padding;
+    text-align: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    @include hover-elevation; // Llamamos al Mixin
+
+    // Elementos con anidamiento (&__)
+    &__name {
+        font-weight: bold;
+        color: $dark-bg;
+        margin-bottom: 0.5rem;
+    }
+
+    &__temp {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin: 1rem 0;
+    }
+
+    &__status {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    // Modificador para la vista de detalle
+    &--detail {
+        cursor: default;
+        &:hover {
+            transform: none;
+            box-shadow: $shadow-soft;
+        }
+    }
+}
