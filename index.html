@@ -1,43 +1,68 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clima Villarrica</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-.card {
-transition: 0.3s;
-cursor: pointer;
-border-radius: 15px;
-border: 1px solid #ddd;
-padding: 20px;
-background: white;
-margin-bottom: 20px;
-}
-.card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-body { background-color: #f8f9fa; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Villarrica - Módulo 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-<header>
-<nav class="navbar navbar-dark bg-dark mb-4">
-<div class="container">
-<span class="navbar-brand" onclick="mostrarHome()" style="cursor:pointer">Clima Villarrica</span>
-<button class="btn btn-outline-light btn-sm" onclick="mostrarHome()">Inicio</button>
-</div>
-</nav>
-</header>
-<main class="container">
-<div id="home-section">
-<h1 class="text-center mb-4">Localidades Araucanía</h1>
-<div id="contenedor-cards" class="row"></div>
-</div>
-<div id="detalle-section" style="display: none;">
-<div id="contenido-detalle"></div>
-</div>
-</main>
-<script src="script.js"></script>
+<body class="weather-app">
+
+    <header class="weather-app__header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#" onclick="mostrarHome()">
+                    <span class="weather-app__logo-icon">☀️</span> Clima Araucanía
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="mostrarHome()">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favoritos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        
+        <section id="home-section" class="weather-app__content">
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold">Estado del Clima</h1>
+                <p class="lead text-muted">Explora las condiciones actuales en la zona lacustre</p>
+            </div>
+            
+            <div id="contenedor-cards" class="row g-4">
+                </div>
+        </section>
+
+        <section id="detalle-section" class="weather-app__detail" style="display: none;">
+            <div id="contenido-detalle" class="row justify-content-center">
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="weather-app__footer bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">© 2026 App de Clima Araucanía</p>
+            <p class="small text-secondary">Desarrollado para el Módulo 3 - Diseño y Estilos Pro</p>
+            <div class="weather-app__social-links">
+                <a href="#" class="text-white-50 me-3">GitHub</a>
+                <a href="#" class="text-white-50">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
