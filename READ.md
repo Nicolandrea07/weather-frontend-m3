@@ -20,4 +20,4 @@ Esta es la versión profesional de la aplicación de clima enfocada en la Regió
 * [cite_start]**Escritorio (≥1024px):** Se muestran varias tarjetas por fila (`col-lg-4`) con espaciado coherente[cite: 38, 64].
 
 ## 🔗 Enlace al Repositorio
-https://github.com/Nicolandrea07/weather-frontend-m3.
+https://nicolandrea07.github.io/weather-frontend-m3/
