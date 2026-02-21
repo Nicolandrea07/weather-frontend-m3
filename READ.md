@@ -1,23 +1,22 @@
-# Weather App - Módulo 3 (Villarrica y Zona Lacustre)
+## 🚀 Módulo 4: Lógica y Estadísticas (JavaScript)
 
-Esta es la versión profesional de la aplicación de clima enfocada en la Región de la Araucanía. [cite_start]En esta iteración, se ha refactorizado el código para aplicar estándares de la industria en cuanto a organización de estilos y responsividad[cite: 6].
+[cite_start]En esta iteración, la aplicación ha pasado de tener contenido estático a generar toda la interfaz dinámicamente mediante JavaScript, cumpliendo con los objetivos de programación funcional y manipulación del DOM[cite: 106, 113].
 
-## 🛠️ Tecnologías y Metodologías
-* [cite_start]**HTML5 Semántico:** Estructura clara utilizando etiquetas como `header`, `main` y `footer`[cite: 21, 111].
-* [cite_start]**Bootstrap 5:** Implementación de un sistema de grillas (Grid) totalmente responsivo[cite: 63, 64].
-* [cite_start]**SASS (Preprocesador):** Modularización de estilos mediante parciales, uso de variables y mixins[cite: 11, 45].
-* [cite_start]**Metodología BEM:** Organización de clases CSS bajo el esquema Bloque-Elemento-Modificador para un código mantenible[cite: 10, 41].
+### 📊 Modelado de Datos
+Los datos están centralizados en un archivo `datos.js` mediante un arreglo de objetos llamado `lugares`. [cite_start]Cada objeto contiene[cite: 159, 161]:
+* **ID y Nombre:** Identificadores únicos para la navegación.
+* **Clima Actual:** Temperatura y estado para la vista principal.
+* **Pronóstico Semanal:** Un sub-arreglo de 7 objetos que detallan el día, temperaturas mínimas/máximas y el estado del cielo.
 
-## 📂 Estructura de Archivos SASS
-[cite_start]El proyecto utiliza una arquitectura modular de SASS[cite: 47, 53, 79]:
-* [cite_start]`scss/base/_variables.scss`: Contiene los colores, fuentes y medidas globales del proyecto[cite: 49, 55].
-* [cite_start]`scss/components/_place-card.scss`: Estilos específicos de las tarjetas de clima usando anidamiento y mixins[cite: 51, 56].
-* [cite_start]`scss/main.scss`: Archivo maestro que importa todos los parciales para su compilación[cite: 52, 53].
+### 📈 Lógica de Estadísticas
+[cite_start]Se implementó una función de procesamiento que recorre el pronóstico semanal de cada lugar utilizando ciclos (`for...of`) para calcular[cite: 166, 167]:
+1. **Temperatura Mínima y Máxima:** Los valores extremos alcanzados en la semana.
+2. **Promedio Semanal:** Calculado mediante la acumulación de temperaturas diarias y su posterior división.
+3. [cite_start]**Contador de Clima:** Un análisis de los estados del tiempo para generar un resumen textual dinámico (ej: "Semana mayormente soleada") mediante condicionales[cite: 170, 171].
 
-## 📱 Responsividad (Layout)
-[cite_start]La interfaz se adapta automáticamente a diferentes pantallas[cite: 36, 85]:
-* [cite_start]**Móvil (≤420px):** Las tarjetas se muestran en una sola columna (`col-12`)[cite: 37, 64].
-* [cite_start]**Escritorio (≥1024px):** Se muestran varias tarjetas por fila (`col-lg-4`) con espaciado coherente[cite: 38, 64].
+### 💻 Funcionalidades Técnicas
+* [cite_start]**Renderización Dinámica:** El Home se construye recorriendo el arreglo de datos e inyectando HTML en el DOM al cargar la página[cite: 147].
+* [cite_start]**Navegación entre Vistas:** Uso de clases de Bootstrap (`d-none`) para alternar entre el listado principal y el detalle de cada lugar sin recargar el navegador[cite: 148].
 
 ## 🔗 Enlace al Repositorio
 https://nicolandrea07.github.io/weather-frontend-m3/
